@@ -1,63 +1,50 @@
-import { H1, H2Subtitulo, P } from "../components/Texto.jsx";
-import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import { H2Subtitulo, H2SubtituloBtn, P } from "../components/Texto.jsx";
+import Header from "../components/Header";
 import homeImg from "../assets/home.png";
+import { useTema } from "../context/Theme";
 
 export function Home() {
+  const { tema } = useTema();
+
   return (
-    <div className="bg-azul text-azulescuro min-h-screen flex flex-col ">
+    <div className="bg-azul dark:bg-darkazul dark:text-white text-azulescuro h-screen flex flex-col ">
+      <Header className="bg-azul dark:bg-darkazul shadow-none top-15" Titulo/>
 
-      <header className="w-full flex items-center justify-between px-10 mt-3 ">
-        <img src={logo} alt="logo" className="h-[57px] md:h-[95px]" />
+      <div className="flex-1 flex flex-col md:flex-row">
 
+        <main className="flex-1 flex flex-col justify-center items-center md:items-start px-6 md:px-16 gap-4 ">
+          <h1 className="font-[noticia-text] font-normal text-[40px] md:text-[90px] text-center md:text-left">SCENT – SATIONAL THERAPY</h1>
+          <H2Subtitulo className="text-center md:text-left"> Experimente relaxamento e foco de uma nova maneira com nosso difusor de 3 aromas</H2Subtitulo>
 
-        <div className="hidden md:flex items-center gap-4">
-          <H2Subtitulo className="hover:underline cursor-pointer"> <Link to="/login" > Entrar </Link> </H2Subtitulo>
-          <img src="" alt="Alterar tema" className="h-5 w-5" />
+          <div className="flex justify-center md:justify-start w-full mt-3 mb-2 md:mb-0">
+            <button className="bg-marrom hover:bg-[#6d514d] rounded-full p-3 max-w-[340px] w-full md:w-auto cursor-pointer">
+              <H2SubtituloBtn className="text-white">BAIXE O APP</H2SubtituloBtn>
+            </button>
+          </div>
+        </main>
+
+        <div className="flex-1 flex justify-center md:justify-end items-center px-6 md:px-0">
+          <img src={homeImg} alt="Imagem inicial" className="max-h-full w-auto object-contain"/>
         </div>
+      </div>
 
-
-        <div className="flex md:hidden items-center gap-4">
-          <img src="" alt="Alterar tema" className="h-5 w-5" />
-          <img src="" alt="Menu" className="h-6 w-6" />
-        </div>
-      </header>
-
-
-      <main className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 flex-1 gap-8 md:gap-0  ">
-
-        <div className="flex-1 flex flex-col gap-4 text-center md:text-left pb-40">
-          <h1 className="font-[noticia-text] font-normal text-[40px] md:text-[90px]">SCENT – SATIONAL THERAPY</h1>
-          <H2Subtitulo>
-            Experimente relaxamento e foco de uma nova maneira com nosso difusor de 3 aromas
-          </H2Subtitulo>
-        </div>
-
-        <div className="flex-1 flex justify-end items-start">
-          <img src={homeImg} alt="Imagem inicial" className="h-[189px] md:h-[654px] max-w-[737px] w-full object-contain"/>
-        </div>
-      </main>
-
-
-      <section className="bg-white w-full flex flex-col md:flex-row justify-around items-center py-8 px-6 gap-8 md:gap-0">
-        
+      <section className="bg-white dark:bg-darkbg flex-1 flex flex-col md:flex-row justify-around items-center px-6 md:px-16 gap-8 md:gap-0 ">
         <div className="flex flex-col items-center text-center max-w-[300px]">
-          <img src="" alt="Alvo" className="h-12 mb-4" />
+          <img src={tema === "light" ? "./src/assets/alvo.png" : "./src/assets/alvodark.png"} alt="Alvo" className="h-22 mb-4"/>
           <P>Promover bem-estar, foco e relaxamento unindo tecnologia e aromaterapia.</P>
         </div>
 
-
         <div className="flex flex-col items-center text-center max-w-[300px]">
-          <img src="" alt="Saúde" className="h-12 mb-4" />
+          <img src={tema === "light" ? "./src/assets/saude.png" : "./src/assets/saudedark.png"} alt="Saúde" className="h-22 mb-4"/>
           <P>Para quem busca qualidade de vida, bem-estar, relaxamento e foco no dia a dia.</P>
         </div>
 
-
         <div className="flex flex-col items-center text-center max-w-[300px]">
-          <img src="" alt="Neve" className="h-12 mb-4" />
+          <img src={tema === "light" ? "./src/assets/aroma.png" : "./src/assets/aromadark.png"} alt="Aroma" className="h-22 mb-4"/>
           <P>Escolha, ative e controle seus aromas. Bem-estar inteligente, do seu jeito, no seu tempo.</P>
         </div>
       </section>
+
     </div>
   );
 }
