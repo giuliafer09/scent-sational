@@ -8,12 +8,12 @@ export function Jogo() {
             <div className='p-3 bg-azul dark:bg-darkazul'></div>
             <Header  className="bg-white dark:bg-darkbg shadow-md "/>
 
-            <div className="flex justify-center pt-7 md:mb-7">
-                <H1 >JOGO</H1>
+            <div className="flex justify-center  mt-5">
+                <H1  className="mb-6">Jogo</H1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-20 py-8 items-center ">
-                <section className="bg-white dark:bg-darkbg dark:text-white rounded-[30px] p-6 md:p-30 h-[400px] md:h-[542px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-20   items-center ">
+                <section className="bg-white dark:bg-darkbg dark:text-white rounded-[30px] p-10 md:p-30 h-[550px] md:h-[542px]">
                     <H2Subtitulo>
                         No jogo R.E.M. o jogador irá em uma jornada por diferentes sonhos em cada fase. 
                         Cada uma representa um cenário onírico onde ele precisará passar por desafios, 

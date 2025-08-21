@@ -10,10 +10,10 @@ export function Manual() {
 
             <div className="flex flex-col items-center px-4 md:px-8">
                 <H1 className="mt-6 text-center  dark:text-white">Manual de Utilização do produto</H1>
-                <H2Subtitulo className="mb-8 text-center text-azulescuro  dark:text-white">Passo a passo de utilização:</H2Subtitulo>
+                <H2Subtitulo className="mb-6 text-center text-azulescuro  dark:text-white">Passo a passo de utilização:</H2Subtitulo>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[980px]">
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 ">
                         <section className="bg-white dark:bg-darkbg rounded-lg shadow p-4 flex flex-col gap-3 justify-center px-10">
                         <H2SubtituloBtn className='text-azulescuro  dark:text-white'>1. Preparação do dispositivo:</H2SubtituloBtn>
                         <P>✓ Posicione o difusor sobre uma superfície estável;</P>

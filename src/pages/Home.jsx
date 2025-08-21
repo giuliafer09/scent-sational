@@ -17,7 +17,7 @@ export function Home() {
           <H2Subtitulo className="text-center md:text-left"> Experimente relaxamento e foco de uma nova maneira com nosso difusor de 3 aromas</H2Subtitulo>
 
           <div className="flex justify-center md:justify-start w-full mt-3 mb-2 md:mb-0">
-            <button className="bg-marrom hover:bg-[#6d514d] rounded-full p-3 max-w-[340px] w-full md:w-auto cursor-pointer">
+            <button className="bg-marrom hover:bg-[#6d514d] rounded-full p-3 md:p-5 max-w-[250px] w-full md:w-auto cursor-pointer">
               <H2SubtituloBtn className="text-white">BAIXE O APP</H2SubtituloBtn>
             </button>
           </div>
@@ -28,7 +28,7 @@ export function Home() {
         </div>
       </div>
 
-      <section className="bg-white dark:bg-darkbg flex-1 flex flex-col md:flex-row justify-around items-center px-6 md:px-16 gap-8 md:gap-0 ">
+      <section className="bg-white dark:bg-darkbg flex-1 flex flex-col md:flex-row justify-around items-center px-6 md:px-16 gap-8 md:gap-0 pb-7 pt-7">
         <div className="flex flex-col items-center text-center max-w-[300px]">
           <img src={tema === "light" ? "./src/assets/alvo.png" : "./src/assets/alvodark.png"} alt="Alvo" className="h-22 mb-4"/>
           <P>Promover bem-estar, foco e relaxamento unindo tecnologia e aromaterapia.</P>

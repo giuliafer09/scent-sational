@@ -44,7 +44,7 @@ export default function Header({ className = "", Titulo = false }) {
             {menuOpen && (
                 <div className="  md:hidden absolute top-22 right-1 mt-2 bg-azul dark:bg-darkazul shadow-lg rounded-lg p-4 flex flex-col gap-2 z-50">
                     
-                    <nav>
+                    <nav className="gap-10 dark:text-white  text-azulescuro">
                         <H2Subtitulo><Link to="/manual" className="hover:underline">Manual</Link></H2Subtitulo>
                         <H2Subtitulo><Link to="/produtos" className="hover:underline">Produtos</Link></H2Subtitulo>
                         <H2Subtitulo><Link to="/quem-somos" className="hover:underline">Quem somos ?</Link></H2Subtitulo>
