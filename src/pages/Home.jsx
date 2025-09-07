@@ -1,6 +1,14 @@
 import { H2Subtitulo, H2SubtituloBtn, P } from "../components/Texto.jsx";
 import Header from "../components/Header";
-import homeImg from "../assets/Home.png";
+import homeImg from "../assets/home.png";
+
+import alvoImg from "../assets/alvo.png";
+import alvoDarkImg from "../assets/alvodark.png";
+import saudeImg from "../assets/saude.png";
+import saudeDarkImg from "../assets/saudedark.png";
+import aromaImg from "../assets/aroma.png";
+import aromaDarkImg from "../assets/aromadark.png";
+
 import { useTema } from "../context/Theme";
 
 export function Home() {

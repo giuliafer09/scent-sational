@@ -14,7 +14,7 @@ export function Produtos() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         <div className="shadow p-4 flex flex-col items-center">
-                            <img src="./src/assets/P1.png" alt="arduino" className="w-full h-auto" />
+                            <img src="./src/assets/p1.png" alt="arduino" className="w-full h-auto" />
                             
                         </div>
                         <div className=" shadow p-4 flex flex-col items-center">
