@@ -1,6 +1,6 @@
 import { H2Subtitulo, H2SubtituloBtn, P } from "../components/Texto.jsx";
 import Header from "../components/Header";
-import homeImg from "../assets/home.png";
+import homeImg from "../assets/Home.png";
 import { useTema } from "../context/Theme";
 
 export function Home() {
